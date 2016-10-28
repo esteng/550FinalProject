@@ -1,0 +1,39 @@
+TODO list:
+
+1. By end of the weekend:
+    - get code working (Elias, Emily)
+    - write up proposal (Emily)
+    - summarize existing work (Elias)
+    - general tasks for each person
+
+2. By Nov. 6th
+    - get AG code working for 1 possible nucleus 
+        - write a grammar for the 1 nucleus
+        - if 'a' is only nucleus
+            - bab, a, bb, baab,  
+        - i.e. CV or V.  
+
+3. By Nov. 13th
+    - get it working for 1 language
+        - Spanish 
+        - need a grammar for Spanish (Emily)
+            - research on Spanish phonotactics (Emily)
+        - somehow need to come up with Pitman-Yor function params (Elias)  
+        - add to previous working example to work for language (Elias/Emily)
+
+4. By Nov 20th
+    - adjust for other languages
+        - creating generalized grammar (Emily)
+        - new Pitman-Yor (Elias)
+        - in-depth look at possible phonemes (Both)
+            - /n/, /r/ can be syllabic for example  
+
+5. By Nov 27th   
+    - presentation (Elias/Emily)
+
+6. Nov 30th
+    - presentation (Both)
+    - all code finished (Elias)
+
+7. By Dec 12th 
+    - do the write-up (Both)
