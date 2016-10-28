@@ -1,0 +1,184 @@
+==> output-200811-expt/s_Gcolloc3-syllables_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc3-syllables_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 79.40 R 84.90 F 82.06 BP 87.12 BR 95.67 BF 91.20 LP 75.60 LR 62.38 LF 68.35 
+Avg word length: 2.87 (true), 2.68 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_D_E_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_D_E_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.avprs:
+P 72.85 R 84.57 F 78.27 BP 80.98 BR 99.40 BF 89.25 LP 69.51 LR 54.20 LF 60.91 
+Avg word length: 2.87 (true), 2.47 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_D_E_n2000_m0_t1_w1_a0_b1e4_e0_f0_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_D_E_n2000_m0_t1_w1_a0_b1e4_e0_f0_g10_h0.1_R-1.avprs:
+P 81.42 R 87.94 F 84.55 BP 87.61 BR 97.54 BF 92.31 LP 74.47 LR 61.17 LF 67.17 
+Avg word length: 2.87 (true), 2.66 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 65.51 R 47.97 F 55.39 BP 93.13 BR 57.86 BF 71.38 LP 46.41 LR 73.96 LF 57.03 
+Avg word length: 2.87 (true), 3.92 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 85.51 R 87.67 F 86.57 BP 91.69 BR 94.96 BF 93.30 LP 80.51 LR 69.11 LF 74.38 
+Avg word length: 2.87 (true), 2.80 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_D_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_D_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.avprs:
+P 70.51 R 83.11 F 76.30 BP 79.10 BR 99.09 BF 87.97 LP 69.50 LR 50.72 LF 58.64 
+Avg word length: 2.87 (true), 2.43 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_D_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_D_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 85.49 R 91.25 F 88.28 BP 90.12 BR 98.72 BF 94.22 LP 82.38 LR 67.60 LF 74.26 
+Avg word length: 2.87 (true), 2.69 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 81.65 R 81.89 F 81.77 BP 90.15 BR 90.52 BF 90.34 LP 64.30 LR 71.16 LF 67.55 
+Avg word length: 2.87 (true), 2.86 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 86.19 R 92.19 F 89.08 BP 90.28 BR 99.17 BF 94.52 LP 78.75 LR 66.77 LF 72.27 
+Avg word length: 2.87 (true), 2.68 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R0.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R0.avprs:
+P 83.80 R 82.96 F 83.38 BP 91.77 BR 90.47 BF 91.12 LP 72.77 LR 70.40 LF 71.57 
+Avg word length: 2.87 (true), 2.90 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 82.23 R 82.70 F 82.47 BP 89.99 BR 90.72 BF 90.35 LP 66.79 LR 68.81 LF 67.79 
+Avg word length: 2.87 (true), 2.85 (found)
+
+==> output-200811-expt/s_Gcolloc3-syllablesIF_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc3-syllablesIF_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 85.41 R 91.53 F 88.36 BP 89.93 BR 99.04 BF 94.27 LP 81.96 LR 67.07 LF 73.77 
+Avg word length: 2.87 (true), 2.68 (found)
+
+==> output-200811-expt/s_Gcolloc_D_E_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.score <==
+Results for output-200811-expt/s_Gcolloc_D_E_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.avprs:
+P 72.70 R 77.69 F 75.11 BP 83.41 BR 91.50 BF 87.27 LP 69.66 LR 40.50 LF 51.22 
+Avg word length: 2.87 (true), 2.68 (found)
+
+==> output-200811-expt/s_Gcolloc_D_E_n2000_m0_t1_w1_a0_b1e4_e0_f0_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc_D_E_n2000_m0_t1_w1_a0_b1e4_e0_f0_g10_h0.1_R-1.avprs:
+P 75.40 R 71.97 F 73.65 BP 89.82 BR 84.03 BF 86.83 LP 73.44 LR 56.09 LF 63.61 
+Avg word length: 2.87 (true), 3.01 (found)
+
+==> output-200811-expt/s_Gcolloc_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gcolloc_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 49.58 R 51.67 F 50.60 BP 66.77 BR 70.75 BF 68.71 LP 26.65 LR 52.91 LF 35.45 
+Avg word length: 2.87 (true), 2.75 (found)
+
+==> output-200811-expt/s_Gcolloc_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 77.23 R 74.24 F 75.71 BP 90.26 BR 85.32 BF 87.72 LP 74.70 LR 57.46 LF 64.96 
+Avg word length: 2.87 (true), 2.98 (found)
+
+==> output-200811-expt/s_Gcolloc_D_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.score <==
+Results for output-200811-expt/s_Gcolloc_D_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.avprs:
+P 65.28 R 73.66 F 69.22 BP 77.45 BR 91.51 BF 83.89 LP 61.47 LR 31.64 LF 41.78 
+Avg word length: 2.87 (true), 2.54 (found)
+
+==> output-200811-expt/s_Gcolloc_D_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc_D_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 74.22 R 74.12 F 74.17 BP 86.69 BR 86.52 BF 86.61 LP 68.01 LR 46.03 LF 54.90 
+Avg word length: 2.87 (true), 2.87 (found)
+
+==> output-200811-expt/s_Gcolloc_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gcolloc_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 47.96 R 66.40 F 55.69 BP 61.93 BR 95.63 BF 75.18 LP 38.76 LR 40.58 LF 39.64 
+Avg word length: 2.87 (true), 2.07 (found)
+
+==> output-200811-expt/s_Gcolloc_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 83.38 R 89.48 F 86.32 BP 88.80 BR 98.00 BF 93.17 LP 80.82 LR 54.88 LF 65.37 
+Avg word length: 2.87 (true), 2.67 (found)
+
+==> output-200811-expt/s_Gcolloc_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R0.score <==
+Results for output-200811-expt/s_Gcolloc_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R0.avprs:
+P 12.19 R 26.30 F 16.66 BP 37.27 BR 98.27 BF 54.04 LP 32.81 LR 17.34 LF 22.68 
+Avg word length: 2.87 (true), 1.33 (found)
+
+==> output-200811-expt/s_Gcolloc_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gcolloc_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 41.96 R 59.71 F 49.29 BP 59.25 BR 94.71 BF 72.90 LP 35.22 LR 35.35 LF 35.29 
+Avg word length: 2.87 (true), 2.02 (found)
+
+==> output-200811-expt/s_Gcolloc_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gcolloc_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 69.53 R 82.38 F 75.41 BP 78.44 BR 98.95 BF 87.51 LP 71.37 LR 40.58 LF 51.74 
+Avg word length: 2.87 (true), 2.42 (found)
+
+==> output-200811-expt/s_Gunigram_D_E_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.score <==
+Results for output-200811-expt/s_Gunigram_D_E_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.avprs:
+P 64.42 R 50.69 F 56.74 BP 91.91 BR 64.21 BF 75.61 LP 55.38 LR 63.51 LF 59.17 
+Avg word length: 2.87 (true), 3.65 (found)
+
+==> output-200811-expt/s_Gunigram_D_E_n2000_m0_t1_w1_a0_b1e4_e0_f0_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gunigram_D_E_n2000_m0_t1_w1_a0_b1e4_e0_f0_g10_h0.1_R-1.avprs:
+P 63.87 R 49.51 F 55.78 BP 92.46 BR 63.06 BF 74.98 LP 55.66 LR 65.56 LF 60.20 
+Avg word length: 2.87 (true), 3.70 (found)
+
+==> output-200811-expt/s_Gunigram_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gunigram_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 64.92 R 50.57 F 56.86 BP 93.09 BR 63.98 BF 75.84 LP 56.00 LR 65.33 LF 60.31 
+Avg word length: 2.87 (true), 3.68 (found)
+
+==> output-200811-expt/s_Gunigram_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gunigram_D_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 64.50 R 50.21 F 56.47 BP 92.58 BR 63.56 BF 75.37 LP 55.03 LR 65.78 LF 59.93 
+Avg word length: 2.87 (true), 3.69 (found)
+
+==> output-200811-expt/s_Gunigram_D_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.score <==
+Results for output-200811-expt/s_Gunigram_D_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R-1.avprs:
+P 62.97 R 50.28 F 55.91 BP 90.28 BR 64.53 BF 75.27 LP 49.90 LR 57.76 LF 53.54 
+Avg word length: 2.87 (true), 3.59 (found)
+
+==> output-200811-expt/s_Gunigram_D_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gunigram_D_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 63.11 R 50.13 F 55.87 BP 90.61 BR 64.24 BF 75.18 LP 51.37 LR 59.42 LF 55.11 
+Avg word length: 2.87 (true), 3.61 (found)
+
+==> output-200811-expt/s_Gunigram_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gunigram_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 79.43 R 80.47 F 79.95 BP 88.76 BR 90.40 BF 89.57 LP 67.31 LR 60.33 LF 63.63 
+Avg word length: 2.87 (true), 2.83 (found)
+
+==> output-200811-expt/s_Gunigram_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gunigram_E_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 80.38 R 80.82 F 80.60 BP 89.64 BR 90.35 BF 90.00 LP 67.28 LR 61.17 LF 64.08 
+Avg word length: 2.87 (true), 2.85 (found)
+
+==> output-200811-expt/s_Gunigram_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R0.score <==
+Results for output-200811-expt/s_Gunigram_n2000_m0_t1_w1_a0_b1e2_e0_f0_g0_h0_R0.avprs:
+P 66.12 R 76.21 F 70.81 BP 77.45 BR 94.19 BF 85.01 LP 56.81 LR 47.69 LF 51.85 
+Avg word length: 2.87 (true), 2.49 (found)
+
+==> output-200811-expt/s_Gunigram_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.score <==
+Results for output-200811-expt/s_Gunigram_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R0.avprs:
+P 74.00 R 80.33 F 77.04 BP 83.12 BR 93.17 BF 87.86 LP 60.76 LR 52.99 LF 56.61 
+Avg word length: 2.87 (true), 2.64 (found)
+
+==> output-200811-expt/s_Gunigram_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811-expt/s_Gunigram_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 74.39 R 79.73 F 76.97 BP 83.89 BR 92.41 BF 87.95 LP 60.79 LR 52.69 LF 56.45 
+Avg word length: 2.87 (true), 2.68 (found)
+
+==> output-200811/s_Gcolloc3-syllablesIF_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811/s_Gcolloc3-syllablesIF_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 85.94 R 88.32 F 87.11 BP 91.80 BR 95.39 BF 93.56 LP 80.76 LR 69.27 LF 74.57 
+Avg word length: 2.87 (true), 2.79 (found)
+
+==> output-200811/s_Gcolloc_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811/s_Gcolloc_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 77.57 R 74.25 F 75.88 BP 90.55 BR 85.06 BF 87.72 LP 75.10 LR 57.76 LF 65.30 
+Avg word length: 2.87 (true), 3.00 (found)
+
+==> output-200811/s_Gunigram_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.score <==
+Results for output-200811/s_Gunigram_n2000_m0_t1_w1_a1e-4_b1e4_e1_f1_g10_h0.1_R-1.avprs:
+P 64.34 R 50.30 F 56.46 BP 92.39 BR 63.88 BF 75.53 LP 54.67 LR 65.10 LF 59.43 
+Avg word length: 2.87 (true), 3.67 (found)
