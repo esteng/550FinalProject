@@ -3,7 +3,7 @@
 import optparse, sys
 
 def filenameline(infn, lineno=-1, outf=sys.stdout):
-    lines = file(infn, "rU").read().strip().split('\n')
+    lines = open(infn, "rU").read().strip().split('\n')
     outf.write('%s %s\n'%(lines[lineno], infn))
                
 if __name__ == '__main__':

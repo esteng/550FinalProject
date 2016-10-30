@@ -222,11 +222,11 @@ if __name__ == '__main__':
         sys.stderr.write("## ** gold and train both read from same source\n")
         sys.exit(2)
     if options.goldfile:
-        goldf = file(options.goldfile, "rU")
+        goldf = open(options.goldfile, "rU")
     else:
         goldf = sys.stdin
     if options.trainfile:
-        trainf = file(options.trainfile, "rU")
+        trainf = open(options.trainfile, "rU")
     else:
         trainf = sys.stdin
 

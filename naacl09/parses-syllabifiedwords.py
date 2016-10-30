@@ -52,7 +52,7 @@ if __name__ == '__main__':
         sys.exit(2)
 
     if len(args) == 1:
-        inf = file(args[0], "rU")
+        inf = open(args[0], "rU")
     else:
         inf = sys.stdin
 

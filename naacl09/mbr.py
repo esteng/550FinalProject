@@ -47,7 +47,7 @@ if __name__ == "__main__":
                       help="produce MBR syllables")
     
     (options,args) = parser.parse_args()
-    data = [parses for fname in args for parses in readparses(file(fname, "rU"))]
+    data = [parses for fname in args for parses in readparses(open(fname, "rU"))]
     # print "len(data) =", len(data), " sum(len(parses)) =", sum((len(parses) for parses in data))
 
     for p in map(most_frequent_parse, *data):

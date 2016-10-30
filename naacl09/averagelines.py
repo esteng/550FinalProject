@@ -46,7 +46,7 @@ if __name__ == '__main__':
         nlines = None
     key_lines = {}
     for infn in args:
-        lines = file(infn, "rU").read().strip().split('\n')[lineno:nlines]
+        lines = open(infn, "rU").read().strip().split('\n')[lineno:nlines]
         key = filename_key(infn, key_re, key_subst)
         if key in key_lines:
             key_lines[key].append(lines)

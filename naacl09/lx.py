@@ -71,7 +71,7 @@ def writecsvfile(filename, data, header=None):
     also checks that each tuple in data has same length as header.
     CSV stands for Comma Separated Values, and CSV files are generally
     readable by spreadsheet programs like Excel."""
-    outf = csv.writer(file(filename+".csv", "wb"))
+    outf = csv.writer(open(filename+".csv", "wb"))
     if header != None:
         outf.writerow(header)
     for row in data:

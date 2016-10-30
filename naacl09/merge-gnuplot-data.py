@@ -14,8 +14,8 @@ if __name__ == '__main__':
     (options,args) = parser.parse_args()
 
     assert(len(args) == 2)
-    inf1 = file(args[0], "rU")
-    inf2 = file(args[1], "rU")
+    inf1 = open(args[0], "rU")
+    inf2 = open(args[1], "rU")
     lines1 = (line.strip() for line in inf1 if line != "" and line[0] != "#")
     lines2 = (line.strip() for line in inf2 if line != "" and line[0] != "#")
     for line1,line2 in zip(lines1,lines2):

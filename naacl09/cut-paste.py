@@ -35,7 +35,7 @@ if __name__ == '__main__':
         sys.stderr.write("Expected even number of arguments")
         sys.exit(1)
 
-    fields = (readfield(file(args[2*i], "rU"), int(args[2*i+1]), options.skip) for i in xrange(len(args)/2))
+    fields = (readfield(open(args[2*i], "rU"), int(args[2*i+1]), options.skip) for i in xrange(len(args)/2))
     for f in zip(*fields):
         sys.stdout.write('\t'.join(f))
         sys.stdout.write('\n')

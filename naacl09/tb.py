@@ -55,7 +55,7 @@ def read_file(filename):
 
     """Return a list of the trees in the PTB file filename."""
     
-    filecontents = file(filename, "rU").read()
+    filecontents = open(filename, "rU").read()
     pos = _header_re.match(filecontents).end()
     trees = []
     _string_trees(trees, filecontents, pos)

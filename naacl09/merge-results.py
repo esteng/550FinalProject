@@ -68,6 +68,6 @@ if __name__ == '__main__':
                     key = fname
             else:
                 key = fname
-            process(file(fname, "rU"), options, key)
+            process(open(fname, "rU"), options, key)
     else:
         process(sys.stdin, options, None)
