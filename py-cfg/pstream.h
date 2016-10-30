@@ -17,7 +17,7 @@
 #define PSTREAM_H
 
 #include <cstdio>
-#include </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/include/c++/4.2.1/ext/stdio_filebuf.h>
+#include <ext/stdio_filebuf.h>
 #include <iostream>
 #include <string>
 #include <cstring>
