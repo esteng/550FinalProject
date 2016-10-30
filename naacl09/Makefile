@@ -17,7 +17,7 @@
 PROGRAM=py-cfg
 
 # OUTPUTDIR is the directory in which all files are produced
-OUTPUTDIR=naacl09
+OUTPUTDIR=naacl09/outputs
 
 # OUTPUTPREFIX is the prefix on all files in OUTPUTDIR associated with this run
 OUTPUTPREFIX=a
@@ -28,7 +28,7 @@ OUTPUTPREFIX=a
 # GRAMMARS=colloc2-syllables colloc-syllables colloc3-syllablesIF colloc2 syllables
 # GRAMMARS=colloc3-nsyllables colloc3-syllables unigram colloc
 # GRAMMARS=unigram colloc colloc3-syllables colloc3-nsyllables
-GRAMMARS=words
+# GRAMMARS=words
 # GRAMMARS=unigram colloc colloc3-syllables colloc3-nsyllables colloc3-esyllables
 # GRAMMARS=colloc2-esyllables colloc-esyllables unigram-esyllables
 # GRAMMARS=colloc-osyllables
@@ -44,14 +44,14 @@ GRAMMARS=words
 # GRAMMARS=syllables colloc3-syllablesIF-biased2 colloc3-syllablesIF colloc3-syllables colloc2-syllablesIF-biased2 colloc2-syllablesIF colloc2-syllables colloc-syllablesIF-biased2 colloc-syllablesIF colloc-syllables unigram-syllablesIF-biased2 unigram-syllablesIF unigram-syllables 
 # GRAMMARS=colloc3-syllablesIF-biased2-bigram colloc3-syllablesIF-biased2-c2bigram colloc3-syllablesIF-biased2-cbigram
 # GRAMMARS=colloc3-syllablesIF-hierarchical0-biased2 colloc3-syllablesIF-hierarchical-biased2 colloc3-syllablesIF-hierarchical-biasedI2
-# GRAMMARS=colloc3-syllables
+GRAMMARS=colloc3-syllables
 
 # GRAMMARS=unigram colloc colloc3-syllablesIF
 
 
 # OUTS is a list of types of output files we're going to produce
-# OUTS=score
-OUTS=prs
+OUTS=score
+# OUTS=prs
 
 # Each fold is a different run; to do 4 runs set FOLDS=0 1 2 3
 FOLDS=0 1 2 3
@@ -98,11 +98,13 @@ GRAMMARFILES=$(foreach g,$(GRAMMARS),$(g).lt)
 
 TARGETS=$(PROGRAM) $(OUTPUTS)
 
-# .PHONY: top
-# top: $(TARGETS)
+.PHONY: top
+top: $(TARGETS)
 
-py-cfg:
-	ln -s ~/550FinalProject/py-cfg py-cfg
+py-cfg2:
+	ln -s ~/550FinalProject/py-cfg/py-cfg py-cfg
+	
+
 
 # PRSFILES=$(patsubst $(OUTPUTDIR)/$(OUTPUTPREFIX)_%.$(out),$(OUTPUTDIR)/$(OUTPUTPREFIX)_%.prs,$(OUTPUTS))
 # .SECONDARY: $(PRSFILES)

@@ -29,5 +29,7 @@ if __name__ == "__main__":
     mapper[' '] = options.word_boundaries
     mapper['\t'] = options.word_boundaries
     mapper['.'] = options.syllable_boundaries
-    file_brentformat(sys.stdin, sys.stdout, mapper)
+    with open("/Users/Elias/550FinalProject/output/sylliformat.txt", 'w') as a1:
+        inpt = open('/Users/Elias/550FinalProject/naacl09/br-phono.txt', 'r')
+        file_brentformat(inpt, a1, mapper)
 

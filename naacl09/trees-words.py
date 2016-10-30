@@ -110,9 +110,7 @@ if __name__ == '__main__':
     outf = sys.stdout
     if len(args) >= 1:
         inf = open(args[0], "rU")
-        print("opened in file: {}".format(args[0]))
         if len(args) >= 2:
             outf = open(args[1], "w")
-            print("opened out file {}".format(args[1]))
     nskip = int(options.skip*options.nepochs/options.rate)
     read_write(inf, outf, nskip)

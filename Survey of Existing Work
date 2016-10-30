@@ -1,0 +1,15 @@
+
+
+Survey of Existing Work
+
+    As a starting point, we will be using Mark Johnson's AdaptorGrammar software. In brief, an AdaptorGrammar is a probabistic context-free grammar with an added parameter (the adaptor) which allows the probability of each expansion to be adjusted based on the frequency of that subtree expansion. Thus given a general grammar it can adjust itself to be more specific (i.e. given data from one language it will gradually adjust probabilities to reflect the nature of that language). The "adaptor" function is the Pitman-Yor distribution. The example that is used for this distribution is as follows: at a Chinese restaurant with n tables, the probability that a new customer will sit at any of the tables is proportional to the number of people at the table (if there are more people, the probability increases). This distribution takes two parameters, a and b. An AdaptorGrammar is a probabilistic context-free grammar with an extra parameter -- a vector of a and b values for a Pitman-Yor adaptor function. While expanding a segment of text according to the production rules in the grammar, the program remembers each expansion. Thus when it comes across any subtree expansion it has seen before, it both expands it and adjusts the probability of that subtree in the AdaptorGrammar. However, given new information, it falls back on the probabilistic context-free grammar it is built off of. (1) Mark Johnson applies the AdaptorGrammar to word segmentation, but it has also been applied to perspective analysis (2). Additionally, since the actual posterior distribution in the original algorithm (i.e. the probability distribution of a subtree expansion given the combined probabilities of each production rule) is too computationally complex to compute, Johnson instead uses a Markov chain Monte Carlo to randomly sample this distribution. Cohen et al. use a Dirichlet process instead to model this posterior distribution (3).  
+
+
+Sources:
+
+1. Johnson, M., Griffiths, T. L., & Goldwater, S. (2006). Adaptor grammars: A framework for specifying compositional nonparametric Bayesian models. In Advances in neural information processing systems (pp. 641-648).
+Chicago 
+
+2. Hardisty, E. A., Boyd-Graber, J., & Resnik, P. (2010, October). Modeling perspective using adaptor grammars. In Proceedings of the 2010 Conference on Empirical Methods in Natural Language Processing (pp. 284-292). Association for Computational Linguistics.
+
+3. Cohen, S. B., Blei, D. M., & Smith, N. A. (2010, June). Variational inference for adaptor grammars. In Human Language Technologies: The 2010 Annual Conference of the North American Chapter of the Association for Computational Linguistics (pp. 564-572). Association for Computational Linguistics.
