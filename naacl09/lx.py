@@ -77,4 +77,4 @@ def writecsvfile(filename, data, header=None):
     for row in data:
         outf.writerow(row)
         if header != None and len(header) != len(row):
-            print "## Error in zipf:writecsv(): header = %s, row = %s" % (header,row)
+            print("## Error in zipf:writecsv(): header = %s, row = %s" % (header,row))

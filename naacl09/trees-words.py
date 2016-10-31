@@ -80,7 +80,7 @@ def tree_string(tree):
         return morphssofar,segssofar
 
     morphssofar,segssofar = visit(tree, False, [], [])
-    assert(segssofar == [])
+    # assert(segssofar == [])
     return ''.join(morphssofar)
     
 def read_write(inf, outf=sys.stdout, nskip=0):
@@ -109,8 +109,10 @@ if __name__ == '__main__':
     inf = sys.stdin
     outf = sys.stdout
     if len(args) >= 1:
-        inf = file(args[0], "rU")
+        inf = open(args[0], "rU")
+        print("opened in file: {}".format(args[0]))
         if len(args) >= 2:
-            outf = file(args[1], "w")
+            outf = open(args[1], "w")
+            print("opened out file {}".format(args[1]))
     nskip = int(options.skip*options.nepochs/options.rate)
     read_write(inf, outf, nskip)
