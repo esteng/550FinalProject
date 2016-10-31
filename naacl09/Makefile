@@ -17,7 +17,7 @@
 PROGRAM=py-cfg
 
 # OUTPUTDIR is the directory in which all files are produced
-OUTPUTDIR=naacl09/outputs
+OUTPUTDIR=outputs
 
 # OUTPUTPREFIX is the prefix on all files in OUTPUTDIR associated with this run
 OUTPUTPREFIX=a
@@ -44,9 +44,9 @@ OUTPUTPREFIX=a
 # GRAMMARS=syllables colloc3-syllablesIF-biased2 colloc3-syllablesIF colloc3-syllables colloc2-syllablesIF-biased2 colloc2-syllablesIF colloc2-syllables colloc-syllablesIF-biased2 colloc-syllablesIF colloc-syllables unigram-syllablesIF-biased2 unigram-syllablesIF unigram-syllables 
 # GRAMMARS=colloc3-syllablesIF-biased2-bigram colloc3-syllablesIF-biased2-c2bigram colloc3-syllablesIF-biased2-cbigram
 # GRAMMARS=colloc3-syllablesIF-hierarchical0-biased2 colloc3-syllablesIF-hierarchical-biased2 colloc3-syllablesIF-hierarchical-biasedI2
-GRAMMARS=colloc3-syllables
+# GRAMMARS=colloc3-syllables
 
-# GRAMMARS=unigram colloc colloc3-syllablesIF
+GRAMMARS=unigram colloc colloc3-syllablesIF
 
 
 # OUTS is a list of types of output files we're going to produce
@@ -102,7 +102,7 @@ TARGETS=$(PROGRAM) $(OUTPUTS)
 top: $(TARGETS)
 
 py-cfg2:
-	ln -s ~/550FinalProject/py-cfg/py-cfg py-cfg
+	sudo ln -s ~/550FinalProject/py-cfg/py-cfg py-cfg
 	
 
 
@@ -126,7 +126,7 @@ $(OUTPUTDIR)/$(OUTPUTPREFIX)_%.avprs: mbr.py $(foreach fold,$(FOLDS),$(OUTPUTDIR
 $(OUTPUTDIR)/$(OUTPUTPREFIX)_%.sws  $(OUTPUTDIR)/$(OUTPUTPREFIX)_%.wlt: $(PROGRAM) $(GRAMMARFILES) $(CORPUS) br-syll-input.py trees-words.py eval.py
 	mkdir -p $(OUTPUTDIR)
 	echo "Starting $@"
-	$(EXEC) br-syll-input.py < $(CORPUS) | $(PROGRAM) -A $(basename $@).prs \
+	$(EXEC) python br-syll-input.py < $(CORPUS) | ./$(PROGRAM) -A $(basename $@).prs \
 		-C -r $$RANDOM -d 10 -x $(TRACEEVERY) \
 		-F $(basename $@).trace \
 		-G $(basename $@).wlt \
