@@ -370,23 +370,12 @@ class Hybrid(object):
         
         self._adapted_non_terminals = set(adapted_non_terminals);
 
-        print "left hand side: ", pcfg_productions[0].lhs()
-        print "right hand side ", pcfg_productions[0].rhs()
-        print "type of rhs hand side ", type(pcfg_productions[0].rhs())
-
+ 
         self._non_terminals = set(pcfg_production.lhs() for pcfg_production in pcfg_productions)
         self._terminals = set();
         for pcfg_production in pcfg_productions:
             self._terminals |= set(pcfg_production.rhs()) - self._non_terminals;
 
-        print "terminals are : ", self._terminals
-        print "types are : ", ",".join([str(type(t)) for t in self._terminals])
-
-        print "non_terminals are : ", self._non_terminals
-        print "terminals:", " ".join([terminal.encode('utf-8') for terminal in self._terminals])
-        print "non-terminals:", self._non_terminals
-        print "adapted non-terminal:", self._adapted_non_terminals;
-        
         assert(self._non_terminals.isdisjoint(self._terminals))
         assert(self._adapted_non_terminals.isdisjoint(self._terminals))
         assert(self._adapted_non_terminals.issubset(self._non_terminals))
@@ -614,9 +603,9 @@ class Hybrid(object):
             candidate_adaptors = self._adapted_non_terminals;
         
         sequence_length = len(input_sequence);
-        print "input sequence is {}".format(input_sequence)
-        print "sentence root: {}".format(sentence_root)
-        print "candidate adaptors: {}".format(candidate_adaptors)
+        # print "input sequence is {}".format(input_sequence)
+        # print "sentence root: {}".format(sentence_root)
+        # print "candidate adaptors: {}".format(candidate_adaptors)
         root_and_position_to_node = collections.defaultdict(dict);
         position_and_root_to_node = collections.defaultdict(dict);
         
@@ -628,28 +617,28 @@ class Hybrid(object):
                 #     print "i is 0!!!"
                 for non_terminal in self._non_terminals:
                     lhs = non_terminal;
-                    print "{}".format(lhs)
+                    # print "{}".format(lhs)
                     
                     # find the adapted production that spans over i to j
                     if non_terminal in candidate_adaptors:
-                        print "inside candidate adaptors with non_terminal = {}".format(non_terminal)
+                        # print "inside candidate adaptors with non_terminal = {}".format(non_terminal)
                         #print self._active_adapted_production_to_nu_index_of_lhs[non_terminal]
                         candidate_adapted_productions = self.get_adapted_productions(lhs=non_terminal, rhs=tuple(input_sequence[i:j]));
-                        print "adapted productions are {}".format(candidate_adapted_productions)
+                        # print "adapted productions are {}".format(candidate_adapted_productions)
                         for candidate_adapted_production in candidate_adapted_productions:
-                            print "candidate_adapted_production is {}".format(candidate_adapted_production)
+                            # print "candidate_adapted_production is {}".format(candidate_adapted_production)
                             nu_index = self._active_adapted_production_to_nu_index_of_lhs[lhs][candidate_adapted_production];
-                            print "past the nu index"
+                            # print "past the nu index"
                             # this is to prevent searching new sampled rules
                             if nu_index>=E_log_stick_weights[lhs].shape[1]:
-                                print "continuing!"
+                                # print "continuing!"
                                 continue;
                             
                             if (i, j) not in root_and_position_to_node[lhs]:
                                 hyper_node = util.HyperNode(lhs, (i, j));
                                 root_and_position_to_node[lhs][(i, j)] = hyper_node;
                                 position_and_root_to_node[(i, j)][lhs] = hyper_node;
-                            print "adding {}{}".format(i,j)    
+                            # print "adding {}{}".format(i,j)    
                             root_and_position_to_node[lhs][(i, j)].add_new_derivation(candidate_adapted_production, E_log_stick_weights[lhs][0, nu_index], hyper_nodes=None);
                             
                     # find the pcfg productions
@@ -723,13 +712,8 @@ class Hybrid(object):
                         #root_and_position_to_node[lhs][(i, j)].add_new_derivation(unary_production, E_log_theta[lhs][0, gamma_index], [root_and_position_to_node[rhs][(i, j)]]);
         
         if sentence_root==None:
-            try:
-                return root_and_position_to_node[self._start_symbol][(0, sequence_length)];
-            except KeyError:
-               pass
-                # print root_and_position_to_node[self._start_symbol]
-                # print sequence_length
-
+            return root_and_position_to_node[self._start_symbol][(0, sequence_length)];
+       
         else:
             assert isinstance(sentence_root, nltk.grammar.Nonterminal);
             return root_and_position_to_node[sentence_root][(0, sequence_length)];
@@ -812,7 +796,7 @@ class Hybrid(object):
             log_likelihood = 0;
         
         E_log_stick_weights, E_log_theta = self.propose_pcfg();
-        
+        f1 = open("result_strings",'w')
         #for input_string in input_strings:
         for string_index in xrange(len(input_strings)):
             input_string = input_strings[string_index];
@@ -820,17 +804,18 @@ class Hybrid(object):
             #compute_inside_probabilities_clock = time.time()
             parsed_string = input_string.split();
             root_node = self.compute_inside_probabilities(E_log_stick_weights, E_log_theta, parsed_string);
+            f1.write(str(root_node) + "\n")
+            # print(root_node)
             #self.model_state_assertion();
             #compute_inside_probabilities_clock = time.time() - compute_inside_probabilities_clock
             #print "time to compute inside probabilities", compute_inside_probabilities_clock
 
             if inference_parameter!=None:
                 retrieved_tokens_lists = nltk.probability.FreqDist();
-            
+            f1 = open("productions","w")
             #sample_tree_clock = time.time()
             for sample_index in xrange(number_of_samples):
                 production_list = self._sample_tree(root_node, parsed_string, pcfg_sufficient_statistics, adapted_sufficient_statistics);
-
                 if inference_parameter!=None:
                     log_likelihood += self._compute_log_likelihood(production_list, E_log_stick_weights, E_log_theta);
                     
@@ -848,12 +833,11 @@ class Hybrid(object):
                     # Warning: if you are using nltk 2.x, please use inc()
                     #retrieved_tokens_lists.inc(" ".join(retrieved_tokens), 1);
                     retrieved_tokens_lists[" ".join(retrieved_tokens)] += 1;
-            
+
             if inference_parameter!=None:
                 assert(retrieved_tokens_lists.N()==number_of_samples);
                 
                 reference_string = reference_strings[string_index];
-    
                 #maximum_tokens = retrieved_tokens_lists.max();
                 #output_maximum_truth_file.write("%s\n" % reference_string);
                 #output_maximum_test_file.write("%s\n" % maximum_tokens);
@@ -2487,12 +2471,6 @@ class Hybrid(object):
             return self._rhs_to_active_adapted_production[rhs];
         else:
             # intersect
-            print "both here!"
-            print '{} -> {}'.format(lhs, rhs)
-            print "returning {}".format( self._lhs_rhs_to_active_adapted_production[(lhs, rhs)])
-            print "from {}".format( self._lhs_rhs_to_active_adapted_production)
-            if self._lhs_rhs_to_active_adapted_production[(lhs, rhs)] != set([]):
-                sys.exit()
             return self._lhs_rhs_to_active_adapted_production[(lhs, rhs)];
 
     """

@@ -1,0 +1,1 @@
+[Word (0:2) <Word -> B A (Word -> Syls, Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')> <Word -> Syls [Syls (0:2) <Syls -> Syl [Syl (0:2) <Syl -> Onset Nucleus [Onset (0:1) <Onset -> 'B'>  [Nucleus (1:2) <Nucleus -> 'A'> > > > 
