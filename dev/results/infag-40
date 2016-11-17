@@ -1,0 +1,33 @@
+==========Onset==========
+False	1	Onset -> 'B'
+==========Nucleus==========
+False	1	Nucleus -> 'A'
+==========Syls==========
+False	0.288506	Syls -> Syl
+False	0.711478	Syls -> Syl Syls
+==========Word==========
+True	0.000241778	Word -> B A A B A B A (Word -> Syls, Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')
+True	2.49293e-05	Word -> B A B A A A (Word -> Syls, Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	2.8941e-05	Word -> A A B A B A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')
+True	0.00018939	Word -> A B A B A A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.00520624	Word -> A A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.00280975	Word -> B A (Word -> Syls, Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')
+True	0.000129275	Word -> A A B A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')
+False	0.0138875	Word -> Syls
+True	5.91081e-05	Word -> B A A B A A (Word -> Syls, Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.343577	Word -> A B A A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	8.9586e-05	Word -> A A A A B A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')
+True	6.06057e-05	Word -> B A B A A A A (Word -> Syls, Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.161367	Word -> A A B A A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.176948	Word -> B A A (Word -> Syls, Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	6.96051e-05	Word -> B A A A B A A (Word -> Syls, Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.000188352	Word -> A A A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.00024807	Word -> A B A B A B A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')
+True	2.63146e-05	Word -> B A B A (Word -> Syls, Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')
+True	0.292097	Word -> A B A A B A A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.00189896	Word -> B A A A (Word -> Syls, Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	0.000192079	Word -> A A A A A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Nucleus, Nucleus -> 'A')
+True	4.88962e-05	Word -> A B A A B A (Word -> Syls, Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl Syls, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A', Syls -> Syl Syls, Syl -> Nucleus, Nucleus -> 'A', Syls -> Syl, Syl -> Onset Nucleus, Onset -> 'B', Nucleus -> 'A')
+==========Syl==========
+False	0.585786	Syl -> Nucleus
+False	0.414199	Syl -> Onset Nucleus

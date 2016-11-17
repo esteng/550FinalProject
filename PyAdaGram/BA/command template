@@ -1,0 +1,11 @@
+python2 -m launch_test --input_directory=brent/ --model_directory=brent/dir1/ --non_terminal_symbol=Words
+
+
+
+python2 -m launch_train --input_directory=BA --output_directory=BA/BA_output --grammar_file=BA/basic_syl_grammar.unigram --number_of_documents=1 --batch_size=10
+
+
+python2 -m launch_train --input_directory=brent --output_directory=BA/BA_output --grammar_file=BA/grammar.unigram --number_of_documents=1000 --batch_size=10
+
+
+python -m launch_test --input_directory=BA --model_directory=BA/BA_output --non_terminal_symbol=Word
