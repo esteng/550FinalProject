@@ -1,0 +1,14 @@
+% non-terminals
+Word ->  Syls
+Syls ->  Syl
+Syls ->  Syl Syls
+Syl ->  Nucleus
+Syl ->  Onset Nucleus
+
+% adapted non-terminals
+@ Word 1500 100 0
+
+
+% terminals
+Onset -> "B" 
+Nucleus -> "A"
