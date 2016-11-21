@@ -24,3 +24,4 @@ for line in lines1:
         print("{} has no match".format(line.strip()))
 
 print("{} remained unmatched".format(unfound))
+print("matched {} out of {}, which is {}%".format((len(lines1) - unfound), len(lines2), 100* (len(lines1) - unfound)/len(lines2)))

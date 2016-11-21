@@ -9,3 +9,6 @@ python2 -m launch_train --input_directory=brent --output_directory=BA/BA_output 
 
 
 python -m launch_test --input_directory=BA --model_directory=BA/BA_output --non_terminal_symbol=Word
+
+
+python2 -m launch_train --input_directory=BA --output_directory=BA/BA_output --grammar_file=../dev/new_grammar

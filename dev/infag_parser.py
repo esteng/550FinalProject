@@ -43,7 +43,8 @@ def get_syls(string):
 
 
 def process_syl(string):
-    onset_regex = re.compile("Onset -> \'.*\'")
+    onset_regex = re.compile("Onset -> \'.*\'.*")
+    rhyme_regex = re.compile("Rhyme ->.*")
     nucleus_regex = re.compile("Nucleus -> \'.*\'")
     coda_regex = re.compile("Coda -> \'.*\'")
 
@@ -51,15 +52,21 @@ def process_syl(string):
     onset,nucleus, coda=None,None,None
     if o is not None:
         onset = re.sub("[\',]", "",o.group(0).split(" ")[2])
-    n = nucleus_regex.search(string)
-    if n is not None:
-        nucleus = re.sub("[\',]", "", n.group(0).split(" ")[2])
-    c = coda_regex.search(string)
-    if c is not None:
-        coda = re.sub("[\',]", "", c.group(0).split(" ")[2])
+    r = rhyme_regex.search(string)
+    if r is not None:
+        n = nucleus_regex.search(r.group(0))
+        if n is not None:
+            nucleus = re.sub("[\',]", "", n.group(0).split(" ")[2])
+        else:
+            print(r.group(0))
+        c = coda_regex.search(r.group(0))
+        if c is not None:
+            coda = re.sub("[\',]", "", c.group(0).split(" ")[2])
+    else:
+        return ""
     toret = "" 
     if onset is not None:
-        toret+= onset
+        toret+= onset    
     toret+= nucleus
     if coda is not None:
         toret+= coda
