@@ -15,4 +15,6 @@ python2 -m launch_train --input_directory=BA --output_directory=BA/BA_output --g
 
 
 
-python2 -m launch_train --input_directory=BA --output_directory=BA/BA_output --grammar_file=BA/BA_grammar
+python2 -m launch_train --input_directory=/Users/Elias/550FinalProject/dev/French/ --output_directory=/Users/Elias/550FinalProject/dev/French --grammar_file=../dev/french.grammar
+
+python scripts/grammar_generator.py aiyuoOeE02951@3 pbtdkgfvszSZmnNIRxG french.grammar j8w

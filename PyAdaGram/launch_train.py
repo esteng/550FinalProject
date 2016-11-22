@@ -224,7 +224,7 @@ def main():
     #from nltk.grammar import parse_grammar, standard_nonterm_parser
     #start, productions = parse_grammar(grammar_rules, standard_nonterm_parser, probabilistic=False)
     from nltk.grammar import read_grammar, standard_nonterm_parser
-    start, productions = read_grammar(grammar_rules, standard_nonterm_parser, probabilistic=False)
+    start, productions = read_grammar(grammar_rules, standard_nonterm_parser, probabilistic=False, encoding = "utf8")
     print "start, productions: ",start, productions
     # create output directory
     now = datetime.datetime.now();
