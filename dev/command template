@@ -11,8 +11,12 @@ python2 -m launch_train --input_directory=brent --output_directory=BA/BA_output 
 python -m launch_test --input_directory=BA --model_directory=BA/BA_output --non_terminal_symbol=Word
 
 
-python2 -m launch_train --input_directory=BA --output_directory=BA/BA_output --grammar_file=../dev/new_grammar
+python -m launch_train --input_directory=BA --output_directory=BA/BA_output --grammar_file=../dev/new_grammar
 
 
+
+python2 -m launch_train --input_directory=/Users/Elias/550FinalProject/dev/French/ --output_directory=/Users/Elias/550FinalProject/dev/French --grammar_file=../dev/french.grammar
+
+python scripts/grammar_generator.py aiyuoOeE02951@3 pbtdlkgfvszSZmnNRxG french.grammar j8w
 
 python2 -m launch_train --input_directory=BA --output_directory=BA/BA_output --grammar_file=BA/BA_grammar
