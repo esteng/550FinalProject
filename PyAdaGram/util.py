@@ -40,7 +40,7 @@ class AdaptedProduction(nltk.grammar.Production):
     def match_grammaton(self, production_list):
         if len(self._productions)!=len(production_list):
             return False;
-        for x in xrange(len(self._productions)):
+        for x in range(len(self._productions)):
             if self._productions[x]!=production_list[x]:
                 return False;
         return True;
@@ -123,12 +123,12 @@ class HyperNode():
         '''
         
         #print "<<<<<<<<<<debug>>>>>>>>>>"
-        #for x in xrange(len(self._derivation)):
+        #for x in range(len(self._derivation)):
             #print self._derivation[x], numpy.exp(self._log_probability[x] - self._accumulated_log_probability);
         #sys.exit();
         
         assert(len(self._derivation)==len(self._log_probability))
-        for x in xrange(len(self._derivation)):
+        for x in range(len(self._derivation)):
             current_probability = numpy.exp(self._log_probability[x] - self._accumulated_log_probability);
             if random_number>current_probability:
                 random_number -= current_probability;
@@ -156,7 +156,7 @@ class HyperNode():
         return output_string
         '''
         
-        for x in xrange(len(self._derivation)):
+        for x in range(len(self._derivation)):
             production = self._derivation[x][0];
             hyper_nodes = self._derivation[x][1];
             
@@ -242,7 +242,7 @@ class HyperGraph():
 def demo():
     graph_node_2 = GraphNode("NP", set(GraphNode("VP")));
     graph_node_1 = GraphNode("NP");
-    print graph_node_1.__eq__(graph_node_2);
+    print(graph_node_1.__eq__(graph_node_2));
 
 if __name__ == '__main__':
     demo()

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import cPickle
+import pickle
 import string
 import numpy
 import getopt
@@ -20,7 +20,7 @@ import scipy.io;
 import collections;
 
 # bash scrip to terminate all sub-processes 
-#kill $(ps aux | grep 'python infag' | awk '{print $2}')
+#kill $(ps aux | grep 'python infag' | awk '{print($2}')
 
 def shuffle_lists(list1, list2):
     assert(len(list1)==len(list2));
@@ -161,7 +161,7 @@ def main():
     for line in input_stream:
         train_docs.append(line.strip());
     input_stream.close();
-    print "successfully load all training documents..."
+    print("successfully load all training documents...")
     
     # parameter set 2
     if options.number_of_documents>0:
@@ -193,7 +193,7 @@ def main():
     assert(options.kappa>=0 and options.kappa<=1);
     kappa = options.kappa;
     if batch_size<=0:
-        print "warning: running in batch mode..."
+        print("warning: running in batch mode...")
         kappa = 0;
 
     # read in adaptor grammars
@@ -225,7 +225,7 @@ def main():
     #start, productions = parse_grammar(grammar_rules, standard_nonterm_parser, probabilistic=False)
     from nltk.grammar import read_grammar, standard_nonterm_parser
     start, productions = read_grammar(grammar_rules, standard_nonterm_parser, probabilistic=False)
-
+    print("start, productions: ",start, productions)
     # create output directory
     now = datetime.datetime.now();
     suffix = now.strftime("%y%b%d-%H%M%S")+"";
@@ -279,36 +279,37 @@ def main():
     #options_output_file.write("heldout_data=" + str(heldout_data) + "\n");
     options_output_file.close()
     
-    print "========== ========== ========== ========== =========="
+    print("========== ========== ========== ========== ==========")
     # parameter set 1
-    print "output_directory=" + output_directory
-    print "input_directory=" + input_directory
-    print "corpus_name=" + corpus_name
-    print "grammar_file=" + str(grammar_file)
+    print("output_directory=" + output_directory)
+    print("input_directory=" + input_directory)
+    print("corpus_name=" + corpus_name)
+    print("grammar_file=" + str(grammar_file))
     
     # parameter set 2
-    print "number_of_documents=" + str(number_of_documents)
-    print "batch_size=" + str(batch_size)
-    print "training_iterations=" + str(training_iterations)
-    print "number_of_processes=" + str(number_of_processes)
-    #print "multiprocesses=" + str(multiprocesses)
+    print("number_of_documents=" + str(number_of_documents))
+    print("batch_size=" + str(batch_size))
+    print("training_iterations=" + str(training_iterations))
+    print("number_of_processes=" + str(number_of_processes))
+    #print("multiprocesses=" + str(multiprocesses)
     
     # parameter set 3
-    print "grammaton_prune_interval=" + str(grammaton_prune_interval)
-    print "snapshot_interval=" + str(snapshot_interval);
-    print "tau=" + str(tau)
-    print "kappa=" + str(kappa)
+    print("grammaton_prune_interval=" + str(grammaton_prune_interval))
+    print("snapshot_interval=" + str(snapshot_interval));
+    print("tau=" + str(tau))
+    print("kappa=" + str(kappa))
     
     # parameter set 4
-    #print "alpha_theta=" + str(alpha_theta)
-    print "alpha_pi=%s" % alpha_pi
-    print "beta_pi=%s" % beta_pi
-    print "desired_truncation_level=%s" % desired_truncation_level
+    #print("alpha_theta=" + str(alpha_theta)
+    print("alpha_pi=%s" % alpha_pi)
+    print("beta_pi=%s" % beta_pi)
+    print("desired_truncation_level=%s" % desired_truncation_level)
     # parameter set 5
-    #print "heldout_data=" + str(heldout_data)
-    print "========== ========== ========== ========== =========="
+    #print("heldout_data=" + str(heldout_data)
+    print("========== ========== ========== ========== ==========")
     
     import hybrid;
+    print("passing prodcutions = : ", productions)
     adagram_inferencer = hybrid.Hybrid(start,
                                        productions,
                                        adapted_non_terminals
@@ -329,7 +330,7 @@ def main():
     clock_iteration = time.time();
     clock_e_step, clock_m_step = adagram_inferencer.seed(train_docs);
     clock_iteration = time.time()-clock_iteration;
-    print 'E-step, M-step and Seed take %g, %g and %g seconds respectively...' % (clock_e_step, clock_m_step, clock_iteration);p
+    print('E-step, M-step and Seed take %g, %g and %g seconds respectively...' % (clock_e_step, clock_m_step, clock_iteration);p
     '''
     
     #adagram_inferencer.export_adaptor_grammar(os.path.join(output_directory, "infag-0"))
@@ -338,7 +339,7 @@ def main():
     random.shuffle(train_docs);    
     training_clock = time.time();
     snapshot_clock = time.time();
-    for iteration in xrange(training_iterations):
+    for iteration in range(int(training_iterations)):
         start_index = batch_size * iteration;
         end_index = batch_size * (iteration + 1);
         if start_index / number_of_documents < end_index / number_of_documents:
@@ -350,33 +351,33 @@ def main():
             train_doc_set = train_docs[(batch_size * iteration) % (number_of_documents) : (batch_size * (iteration+1)) % number_of_documents];
 
         clock_iteration = time.time();
-        #print "processing document:", train_doc_set
+        #print("processing document:", train_doc_set
         clock_e_step, clock_m_step = adagram_inferencer.learning(train_doc_set, number_of_processes);
         
         if (iteration+1)%snapshot_interval==0:
-            #cpickle_file = open(os.path.join(output_directory, "model-%d" % (adagram_inferencer._counter+1)), 'wb');
-            #cPickle.dump(adagram_inferencer, cpickle_file);
-            #cpickle_file.close();
+            #pickle_file = open(os.path.join(output_directory, "model-%d" % (adagram_inferencer._counter+1)), 'wb');
+            #pickle.dump(adagram_inferencer, pickle_file);
+            #pickle_file.close();
             adagram_inferencer.export_adaptor_grammar(os.path.join(output_directory, "infag-" + str((iteration+1))))
             #adagram_inferencer.export_aggregated_adaptor_grammar(os.path.join(output_directory, "ag-" + str((iteration+1))))
         
         if (iteration+1) % 1000==0:
             snapshot_clock = time.time() - snapshot_clock;
-            print 'Processing 1000 mini-batches take %g seconds...' % (snapshot_clock);
+            print('Processing 1000 mini-batches take %g seconds...' % (snapshot_clock));
             snapshot_clock = time.time()
     
         clock_iteration = time.time()-clock_iteration;
-        print 'E-step, M-step and iteration %d take %g, %g and %g seconds respectively...' % (adagram_inferencer._counter, clock_e_step, clock_m_step, clock_iteration);
+        print('E-step, M-step and iteration %d take %g, %g and %g seconds respectively...' % (adagram_inferencer._counter, clock_e_step, clock_m_step, clock_iteration));
     
     adagram_inferencer.export_adaptor_grammar(os.path.join(output_directory, "infag-" + str(adagram_inferencer._counter+1)))
     #adagram_inferencer.export_aggregated_adaptor_grammar(os.path.join(output_directory, "ag-" + str((iteration+1))))
 
-    cpickle_file = open(os.path.join(output_directory, "model-%d" % (iteration+1)), 'wb');
-    cPickle.dump(adagram_inferencer, cpickle_file);
-    cpickle_file.close();
+    pickle_file = open(os.path.join(output_directory, "model-%d" % (iteration+1)), 'wb');
+    pickle.dump(adagram_inferencer, pickle_file);
+    pickle_file.close();
     
     training_clock = time.time()-training_clock;
-    print 'Training finished in %g seconds...' % (training_clock);
+    print('Training finished in %g seconds...' % (training_clock));
 
 if __name__ == '__main__':
     main();
